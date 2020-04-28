@@ -1,17 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+
+import requireAuth from 'components/requireAuth';
 import * as actions from 'actions';
 
 class CommentBox extends Component {
   state = { comment: '' };
-
-  componentDidMount() {
-
-  }
-
-  componentDidUpdate() {
-
-  }
 
   handleChange(e) {
     this.setState({ comment: e.target.value });
@@ -37,8 +31,4 @@ class CommentBox extends Component {
   }
 }
 
-function mapStateToProps(state) {
-  return ({ auth: state.auth })
-}
-
-export default connect(mapStateToProps, actions)(CommentBox);
+export default connect(null, actions)(requireAuth(CommentBox));
