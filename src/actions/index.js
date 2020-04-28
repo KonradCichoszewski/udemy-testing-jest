@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { ADD_COMMENT, FETCH_COMMENTS } from 'actions/types';
+import { ADD_COMMENT, FETCH_COMMENTS, CHANGE_AUTH } from 'actions/types';
 
 export function addComment(comment) {
   return {
@@ -15,5 +15,11 @@ export function fetchComments() {
   return {
     type: FETCH_COMMENTS,
     payload: response
+  }
+}
+
+export function changeAuth() {
+  return {
+    type: CHANGE_AUTH
   }
 }
