@@ -7,11 +7,11 @@ export default {
   "default": {},
   "additionalProperties": true,
   "required": [
-    "actions",
+    "comments",
     "auth"
   ],
   "properties": {
-    "actions": {
+    "comments": {
       "$id": "#/properties/actions",
       "type": "array",
       "title": "The Actions Schema",
